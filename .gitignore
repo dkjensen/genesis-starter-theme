@@ -1,16 +1,67 @@
-# Ignore OS generated files.
-.DS_Store
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
 
-# Ignore node_modules.
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer #
+##########
+vendor/
+vendors/composer/
+!assets/js/vendor/
+wpcs/
+
+# Bower #
+##########
+assets/bower_components/*
+
+# Codekit #
+##########
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
+# NPM #
+##########
 node_modules
 
-# Ignore auto-generated lock files.
-composer.lock
-package-lock.json
-yarn.lock
+# Compiled Files and Build Dirs #
+##########
+/README.html
+/build/
+/coverage/
+/assets/
 
-# Ignore editor files.
-.idea
-
-# Dev packages
-vendor
+# ENV #
+.env
