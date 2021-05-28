@@ -6,6 +6,8 @@
 /// @link   https://github.com/seothemes/genesis-starter-theme
 ////
 
+@use "sass:math";
+
 ////
 /// Media Query mixin
 ///
@@ -223,7 +225,7 @@
 	border-radius: $base--border--radius;
 	color: $color--white;
 	background-color: $color--primary;
-	font-size: $base--font-size / $major-second;
+	font-size: math.div( $base--font-size, $major-second );
 	font-weight: $font-weight--heading;
 	line-height: 1;
 	text-align: center;

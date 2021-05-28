@@ -6,6 +6,8 @@
 /// @link   https://seothemes.com/themes/genesis-starter-theme
 ////
 
+@use "sass:math";
+
 .woocommerce-products-header {
 	display: flex;
 	flex-wrap: wrap;
@@ -130,7 +132,7 @@
 	align-self: flex-start;
 
 	&:after {
-		font-size: $base--font-size / $major-second;
+		font-size: math.div( $base--font-size, $major-second );
 	}
 }
 

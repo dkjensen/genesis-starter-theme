@@ -6,8 +6,10 @@
 /// @link   https://github.com/seothemes/genesis-starter-theme
 ////
 
+@use "sass:math";
+
 .footer-credits {
-	font-size: $base--font-size / $major-second;
+	font-size: math.div( $base--font-size, $major-second );
 
 
 	p {

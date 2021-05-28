@@ -6,10 +6,12 @@
 /// @link   https://seothemes.com/themes/genesis-starter-theme
 ////
 
-$spacing--xxxs: $base--font-size / 8;
-$spacing--xxs: $base--font-size / 5;
-$spacing--xs: $base--font-size / 3;
-$spacing--s: $base--font-size / 2;
+@use "sass:math";
+
+$spacing--xxxs: math.div( $base--font-size, 8 );
+$spacing--xxs: math.div( $base--font-size, 5 );
+$spacing--xs: math.div( $base--font-size, 3 );
+$spacing--s: math.div( $base--font-size, 2 );
 $spacing--m: $base--font-size;
 $spacing--l: $base--font-size * 2;
 $spacing--xl: $base--font-size * 3;

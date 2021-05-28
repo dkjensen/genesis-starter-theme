@@ -39,7 +39,8 @@ mix.disableNotifications();
  * Sets the development path to assets. By default, this is the `/resources`
  * folder in the theme.
  */
-const devPath = 'assets';
+const devPath = 'resources';
+const distPath = 'assets';
 
 /*
  * Sets the path to the generated assets. By default, this is the root folder in
@@ -82,12 +83,12 @@ mix.version();
 mix
     .scripts([
         `${devPath}/js/editor.js`
-    ], `${devPath}/js/min/editor.js`)
+    ], `${distPath}/js/editor.js`)
     .scripts([
         `${devPath}/js/hide-show.js`,
         `${devPath}/js/sticky-header.js`,
         `${devPath}/js/smooth-scroll.js`
-    ], `${devPath}/js/min/main.js`);
+    ], `${distPath}/js/main.js`);
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -99,15 +100,15 @@ mix
  */
 
 // Sass configuration.
-var sassConfig = {
+var sassConfig = { sassOptions: {
     outputStyle: 'compressed',
     indentType: 'tab',
     indentWidth: 1
-};
+} };
 
 // Compile SASS/CSS.
 mix
-    .sass(`${devPath}/scss/main.scss`, `${devPath}/css`, sassConfig).options({
+    .sass(`${devPath}/scss/main.scss`, `${distPath}/css`, sassConfig).options({
     postCss: [
         require('cssnano')({
             preset: ['default', {
@@ -118,8 +119,8 @@ mix
         })
     ]
 })
-    .sass(`${devPath}/scss/editor.scss`, `${devPath}/css`, sassConfig)
-    .sass(`${devPath}/scss/plugins/woocommerce/__index.scss`, `${devPath}/css/woocommerce.css`, sassConfig);
+    .sass(`${devPath}/scss/editor.scss`, `${distPath}/css`, sassConfig)
+    .sass(`${devPath}/scss/plugins/woocommerce/__index.scss`, `${distPath}/css/woocommerce.css`, sassConfig);
 
 // Generate blank stylesheet.
 const banner = [
@@ -149,7 +150,7 @@ fs.writeFile('style.css', banner, function (err) {
 /*
  * Create SVG sprite.
  */
-mix.svgSprite(`${devPath}/svg`, `${devPath}/svg/sprite.svg`);
+mix.svgSprite(`${devPath}/svg`, `${distPath}/svg/sprite.svg`);
 
 /*
  * Add custom Webpack configuration.
@@ -163,16 +164,18 @@ mix.svgSprite(`${devPath}/svg`, `${devPath}/svg/sprite.svg`);
  */
 mix.webpackConfig({
     stats: 'minimal',
-    devtool: 'none',
+    devtool: process.env.NODE_ENV === 'production' ? 'none' : 'eval',
     performance: {hints: false},
     externals: {jquery: 'jQuery'},
     plugins: [
         // @link https://github.com/webpack-contrib/copy-webpack-plugin
-        new CopyWebpackPlugin([
-            {from: `${devPath}/img`, to: `${devPath}/img`},
-            {from: `${devPath}/svg`, to: `${devPath}/svg`},
-            {from: `${devPath}/fonts`, to: `${devPath}/fonts`}
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: `${devPath}/img`, to: `${distPath}/img`},
+                {from: `${devPath}/svg`, to: `${distPath}/svg`},
+                {from: `${devPath}/fonts`, to: `${distPath}/fonts`}
+            ],
+        }),
         // @link https://github.com/Klathmon/imagemin-webpack-plugin
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
@@ -207,13 +210,13 @@ if (process.env.sync) {
      */
     mix.browserSync({
         notify: false,
-        proxy: 'https://genesis-starter.test',
-        host: 'genesis-starter.test',
+        proxy: process.env.MIX_PROXY,
+        host: process.env.MIX_HOST,
         open: 'external',
-        port: '8000',
+        port: process.env.MIX_PORT,
         https: {
-            'key': '/Users/seothemes/.config/valet/Certificates/genesis-starter.test.key',
-            'cert': '/Users/seothemes/.config/valet/Certificates/genesis-starter.test.crt'
+            'key': process.env.MIX_KEY,
+            'cert': process.env.MIX_CERT
         },
         files: [
             'assets/css/*',
