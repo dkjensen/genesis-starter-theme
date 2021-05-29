@@ -2,19 +2,19 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
-return [
-	'add'    => [
-		'featured' => [ 620, 380, true ],
-		'hero'     => [ 1920, 1080, true ],
-	],
-	'remove' => [],
-];
+return array(
+	'add'    => array(
+		'featured' => array( 620, 380, true ),
+		'hero'     => array( 1920, 1080, true ),
+	),
+	'remove' => array(),
+);

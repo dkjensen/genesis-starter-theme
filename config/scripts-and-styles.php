@@ -2,53 +2,53 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
-use function SeoThemes\GenesisStarterTheme\Functions\get_theme_url;
+use function Dkjensen\GenesisStarterTheme\Functions\get_theme_url;
 
-$asset_url    = \trailingslashit( get_theme_url() . 'assets' );
-$google_fonts = \implode( '|', \genesis_get_config( 'google-fonts' ) );
+$genesis_asset_url    = \trailingslashit( get_theme_url() . 'assets' );
+$genesis_google_fonts = \implode( '|', \genesis_get_config( 'google-fonts' ) );
 
-return [
-	'add'    => [
-		[
+return array(
+	'add'    => array(
+		array(
 			'handle' => \genesis_get_theme_handle() . '-editor',
-			'src'    => $asset_url . 'js/editor.js',
-			'deps'   => [ 'wp-blocks' ],
+			'src'    => $genesis_asset_url . 'js/editor.js',
+			'deps'   => array( 'wp-blocks' ),
 			'editor' => true,
-		],
-		[
+		),
+		array(
 			'handle'    => \genesis_get_theme_handle() . '-main',
-			'src'       => $asset_url . 'js/main.js',
+			'src'       => $genesis_asset_url . 'js/main.js',
 			'condition' => function () {
 				return ! \genesis_is_amp();
 			},
-		],
-		[
+		),
+		array(
 			'handle' => \genesis_get_theme_handle() . '-main',
-			'src'    => $asset_url . 'css/main.css',
-		],
-		[
+			'src'    => $genesis_asset_url . 'css/main.css',
+		),
+		array(
 			'handle'    => \genesis_get_theme_handle() . '-woocommerce',
-			'src'       => $asset_url . 'css/woocommerce.css',
+			'src'       => $genesis_asset_url . 'css/woocommerce.css',
 			'condition' => function () {
 				return \class_exists( 'WooCommerce' );
 			},
-		],
-		[
+		),
+		array(
 			'handle' => \genesis_get_theme_handle() . '-google-fonts',
-			'src'    => "//fonts.googleapis.com/css?family=$google_fonts&display=swap",
+			'src'    => "//fonts.googleapis.com/css?family=$genesis_google_fonts&display=swap",
 			'editor' => 'both',
-		],
-	],
-	'remove' => [
+		),
+	),
+	'remove' => array(
 		'superfish',
-	],
-];
+	),
+);

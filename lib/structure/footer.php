@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Structure;
+namespace Dkjensen\GenesisStarterTheme\Structure;
 
 \add_action( 'genesis_footer', __NAMESPACE__ . '\before_footer_widget', 5 );
 /**
@@ -22,10 +22,10 @@ namespace SeoThemes\GenesisStarterTheme\Structure;
 function before_footer_widget() {
 	\genesis_widget_area(
 		'before-footer',
-		[
+		array(
 			'before' => '<div class="before-footer"><div class="wrap">',
 			'after'  => '</div></div>',
-		]
+		)
 	);
 }
 
@@ -46,19 +46,19 @@ function before_footer_widget() {
  */
 function do_footer_credits() {
 	\genesis_markup(
-		[
+		array(
 			'open'    => '<div class="footer-credits"><div class="wrap"><p>',
 			'context' => 'footer-credits',
-		]
+		)
 	);
 
 	// phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped -- sanitized already.
 	echo \do_shortcode( \genesis_strip_p_tags( \wp_kses_post( \genesis_get_option( 'footer_text' ) ) ) );
 
 	\genesis_markup(
-		[
+		array(
 			'close'   => '</p></div></div>',
 			'context' => 'footer-credits',
-		]
+		)
 	);
 }

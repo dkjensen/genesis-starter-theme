@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
 /**
  * Example Class.
@@ -19,7 +19,7 @@ namespace SeoThemes\GenesisStarterTheme;
  * class is loading correctly, place the following in your functions.php file:
  *
  * ```
- * $example = new \SeoThemes\GenesisStarterTheme\Example();
+ * $example = new \Dkjensen\GenesisStarterTheme\Example();
  * $example->print_name();
  * ```
  *
@@ -27,7 +27,7 @@ namespace SeoThemes\GenesisStarterTheme;
  * to run the `composer dump --no-dev` command from the terminal to regenerate the
  * Composer autoloader files so that your new classes are loaded automatically.
  *
- * @package SeoThemes\GenesisStarterTheme
+ * @package Dkjensen\GenesisStarterTheme
  */
 class Example {
 

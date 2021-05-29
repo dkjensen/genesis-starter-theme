@@ -2,19 +2,19 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Tests\Integration;
+namespace Dkjensen\GenesisStarterTheme\Tests\Integration;
 
 /**
  * Class Example_Test
  *
- * @package SeoThemes\GenesisStarterTheme\Tests\Integration
+ * @package Dkjensen\GenesisStarterTheme\Tests\Integration
  */
 class Example_Test extends \WP_UnitTestCase {
 

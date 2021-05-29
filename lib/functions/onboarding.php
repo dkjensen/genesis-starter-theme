@@ -2,20 +2,18 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Functions;
+namespace Dkjensen\GenesisStarterTheme\Functions;
 
 \add_action( 'genesis_onboarding_before_import_content', __NAMESPACE__ . '\backup_featured_images' );
 /**
  * Workaround to backup deleted onboarding featured images.
- *
- * @since 3.5.3
  *
  * @todo  Remove when issue #2505 is fixed.
  *
@@ -52,8 +50,6 @@ function backup_featured_images() {
 \add_action( 'genesis_onboarding_after_import_content', __NAMESPACE__ . '\delete_image_backup', 98 );
 /**
  * Workaround to delete the backup onboarding featured images.
- *
- * @since 3.5.3
  *
  * @todo  Remove when issue #2505 is fixed.
  *
@@ -93,8 +89,6 @@ function delete_image_backup() {
 /**
  * Workaround to fix Genesis multiple featured images issue.
  *
- * @since 3.5.3
- *
  * @todo  Remove when #2506 is fixed.
  *
  * @link  https://github.com/studiopress/genesis/issues/2506
@@ -103,10 +97,10 @@ function delete_image_backup() {
  */
 function update_thumbnail_ids() {
 	$posts = \get_posts(
-		[
+		array(
 			'numberposts' => -1,
 			'post_type'   => 'any',
-		]
+		)
 	);
 
 	foreach ( $posts as $post ) {
@@ -117,10 +111,10 @@ function update_thumbnail_ids() {
 
 			if ( ! $attachment ) {
 				$attachments = \get_posts(
-					[
+					array(
 						'numberposts' => -1,
 						'post_type'   => 'attachment',
-					]
+					)
 				);
 
 				foreach ( $attachments as $attachment_object ) {
@@ -140,8 +134,6 @@ function update_thumbnail_ids() {
 add_action( 'genesis_onboarding_after_import_content', __NAMESPACE__ . '\set_permalink_structure', 100 );
 /**
  * Set permalink structure and flush rules after importing content.
- *
- * @since 3.5.3
  *
  * @return void
  */

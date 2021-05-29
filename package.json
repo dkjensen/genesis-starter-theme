@@ -1,15 +1,18 @@
 {
   "name": "genesis-starter-theme",
-  "version": "3.5.3",
+  "version": "1.0.0",
   "description": "Genesis starter theme with a modern development workflow.",
   "repository": {
     "type": "git",
     "url": "https://github.com/dkjensen/genesis-starter-theme.git"
   },
-  "author": "SEO Themes",
-  "license": "GPL-2.0-or-later",
-  "main": "Gulpfile.js",
+  "author": "David Jensen",
+  "license": "GPL-3.0",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@wordpress/eslint-plugin": "^9.0.5",
+    "@wordpress/stylelint-config": "^19.0.4",
     "bourbon": "^7.0.0",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.3.0",
@@ -18,6 +21,7 @@
     "cssnano": "^5.0.0",
     "eslint": "^7.0.0",
     "genesis-theme-claim": "^0.6.0",
+    "husky": "^6.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webpack-plugin": "^2.4.0",
     "laravel-mix": "^6.0.19",
@@ -30,18 +34,18 @@
     "rimraf": "^3.0.2",
     "sass": "^1.34.0",
     "sass-loader": "^11.1.1",
-    "stylelint": "^9.0.0",
-    "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-order": "^0.8.1",
+    "stylelint": "^13.7.0",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-order": "^4.1.0",
     "theme-claim": "^0.1.2",
     "vue-template-compiler": "^2.6.12",
     "webpack-cli": "^4.7.0"
   },
   "theme": {
     "name": "Genesis Starter Theme",
-    "uri": "https://genesisstartertheme.com/",
-    "authoruri": "https://seothemes.com/",
-    "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "uri": "https://dkjensen.com/",
+    "authoruri": "https://dkjensen.com/",
+    "licenseuri": "http://www.gnu.org/licenses/gpl-3.0.html",
     "domainpath": "/assets/lang",
     "textdomain": "genesis-starter-theme",
     "template": "genesis"
@@ -57,6 +61,7 @@
     "i18n": "npm run i18n:textdomain && npm run i18n:pot",
     "i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,tests,node_modules",
     "i18n:pot": "npx wpi18n makepot --domain-path=assets/lang",
-    "rename": "genesis-theme-claim"
+    "rename": "genesis-theme-claim",
+    "prepare": "husky install"
   }
 }

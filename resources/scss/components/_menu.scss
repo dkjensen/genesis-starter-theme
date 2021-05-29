@@ -2,8 +2,8 @@
 /// Menu component.
 ///
 /// @group  Components
-/// @author Lee Anthony <seothemeswp@gmail.com>
-/// @link   https://github.com/seothemes/genesis-starter-theme
+/// @author David Jensen <david@dkjensen.com>
+/// @link   https://github.com/dkjensen/genesis-starter-theme
 ////
 
 @use "sass:math";
@@ -18,7 +18,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		border: 0;
-		font-size: math.div( $base--font-size, $major-second );
+		font-size: math.div($base--font-size, $major-second);
 	}
 
 	// Menu item.

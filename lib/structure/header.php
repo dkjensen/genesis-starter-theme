@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Structure;
+namespace Dkjensen\GenesisStarterTheme\Structure;
 
 \add_filter( 'genesis_markup_title-area_close', __NAMESPACE__ . '\title_area_hook', 10, 1 );
 /**
@@ -42,10 +42,10 @@ function title_area_hook( $close_html ) {
 function before_header_widget() {
 	\genesis_widget_area(
 		'before-header',
-		[
+		array(
 			'before' => '<div class="before-header"><div class="wrap">',
 			'after'  => '</div></div>',
-		]
+		)
 	);
 }
 
@@ -65,4 +65,3 @@ function custom_logo_size( $html ) {
 
 	return \str_replace( '<img ', '<img style="max-width:' . $width . 'px;max-height:' . $height . 'px"', $html );
 }
-

@@ -2,17 +2,17 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Plugins;
+namespace Dkjensen\GenesisStarterTheme\Plugins;
 
-use function SeoThemes\GenesisStarterTheme\Functions\get_theme_url;
-use function SeoThemes\GenesisStarterTheme\Functions\has_hero_section;
+use function Dkjensen\GenesisStarterTheme\Functions\get_theme_url;
+use function Dkjensen\GenesisStarterTheme\Functions\has_hero_section;
 
 // Bail if WooCommerce is not active.
 if ( ! \class_exists( 'WooCommerce' ) ) {
@@ -63,19 +63,19 @@ function woo_wrapper_start() {
 	\do_action( 'genesis_before_content_sidebar_wrap' );
 
 	\genesis_markup(
-		[
+		array(
 			'open'    => '<div %s>',
 			'context' => 'content-sidebar-wrap',
-		]
+		)
 	);
 
 	\do_action( 'genesis_before_content' );
 
 	\genesis_markup(
-		[
+		array(
 			'open'    => '<main %s>',
 			'context' => 'content',
-		]
+		)
 	);
 
 	\do_action( 'genesis_before_loop' );
@@ -93,19 +93,19 @@ function woo_wrapper_end() {
 	\do_action( 'genesis_after_loop' );
 
 	\genesis_markup(
-		[
+		array(
 			'close'   => '</main>',
 			'context' => 'content',
-		]
+		)
 	);
 
 	\do_action( 'genesis_after_content' );
 
 	\genesis_markup(
-		[
+		array(
 			'close'   => '</div>',
 			'context' => 'content-sidebar-wrap',
-		]
+		)
 	);
 
 	\do_action( 'genesis_after_content_sidebar_wrap' );

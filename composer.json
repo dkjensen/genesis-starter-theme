@@ -1,5 +1,5 @@
 {
-  "name": "seothemes/genesis-starter-theme",
+  "name": "dkjensen/genesis-starter-theme",
   "type": "wordpress-theme",
   "description": "Genesis starter theme with a modern development workflow.",
   "keywords": [
@@ -7,31 +7,38 @@
     "wordpress-theme-development",
     "genesis-framework"
   ],
-  "license": "GPL-2.0-or-later",
+  "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Lee Anthony",
-      "homepage": "https://seothemes.com",
+      "name": "David Jensen",
+      "homepage": "https://dkjensen.com",
       "role": "Developer"
     }
   ],
   "support": {
-    "issues": "https://github.com/seothemes/genesis-starter-theme/issues",
-    "source": "https://github.com/seothemes/genesis-starter-theme"
+    "issues": "https://github.com/dkjensen/genesis-starter-theme/issues",
+    "source": "https://github.com/dkjensen/genesis-starter-theme"
   },
   "require": {
     "php": ">=5.6"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/seothemes/genesis-config-exporter"
+    }
+  ],
   "require-dev": {
-    "php": "^5.6|^7",
     "brain/monkey": "^2.2",
-    "dealerdirect/phpcodesniffer-composer-installer": "v0.5.0",
-    "phpcompatibility/phpcompatibility-wp": "2.0.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "v0.7.1",
+    "phpcompatibility/phpcompatibility-wp": "2.1.1",
     "phpunit/phpunit": "~5.7.9",
     "seothemes/genesis-config-exporter": "@dev",
-    "squizlabs/php_codesniffer": "^3.4.2",
-    "wp-coding-standards/wpcs": "2.1.0",
-    "wp-phpunit/wp-phpunit": "^5.1"
+    "squizlabs/php_codesniffer": "^3.6.0",
+    "wp-coding-standards/wpcs": "^2.3.0",
+    "wp-phpunit/wp-phpunit": "^5.7.2",
+    "php-stubs/woocommerce-stubs": "^5.3",
+    "automattic/vipwpcs": "^2.3"
   },
   "autoload-dev": {
     "psr-4": {
@@ -49,7 +56,7 @@
   "prefer-stable": true,
   "scripts": {
     "stylelint": [
-      "stylelint './assets/scss/**/*.scss' --fix"
+      "stylelint './resources/scss/**/*.scss' --fix"
     ],
     "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
     "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config templates tests functions.php",

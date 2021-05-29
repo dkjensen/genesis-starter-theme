@@ -2,38 +2,38 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
-return [
-	'script' => [
+return array(
+	'script' => array(
 		'mainMenu'         => sprintf( '<span class="hamburger"> </span><span class="screen-reader-text">%s</span>', __( 'Menu', 'genesis-starter-theme' ) ),
 		'menuIconClass'    => null,
 		'subMenuIconClass' => null,
-		'menuClasses'      => [
-			'combine' => [
+		'menuClasses'      => array(
+			'combine' => array(
 				'.nav-primary',
 				'.nav-secondary',
-			],
-		],
-		'menuAnimation'    => [
+			),
+		),
+		'menuAnimation'    => array(
 			'effect'   => 'fadeToggle',
 			'duration' => 'fast',
 			'easing'   => 'swing',
-		],
-		'subMenuAnimation' => [
+		),
+		'subMenuAnimation' => array(
 			'effect'   => 'slideToggle',
 			'duration' => 'fast',
 			'easing'   => 'swing',
-		],
-	],
-	'extras' => [
+		),
+	),
+	'extras' => array(
 		'media_query_width' => '896px',
-	],
-];
+	),
+);

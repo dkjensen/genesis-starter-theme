@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Functions;
+namespace Dkjensen\GenesisStarterTheme\Functions;
 
 // Genesis style trump.
 remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
@@ -31,13 +31,13 @@ function enqueue_assets() {
 		$type      = false !== strpos( $asset['src'], '.js' ) ? 'script' : 'style';
 		$handle    = $asset['handle'];
 		$src       = isset( $asset['src'] ) ? $asset['src'] : '';
-		$deps      = isset( $asset['deps'] ) ? $asset['deps'] : [];
+		$deps      = isset( $asset['deps'] ) ? $asset['deps'] : array();
 		$ver       = isset( $asset['ver'] ) ? $asset['ver'] : \genesis_get_theme_version();
 		$media     = isset( $asset['media'] ) ? $asset['media'] : 'all';
 		$in_footer = isset( $asset['in_footer'] ) ? $asset['in_footer'] : true;
 		$editor    = isset( $asset['editor'] ) ? $asset['editor'] : false;
 		$condition = isset( $asset['condition'] ) ? $asset['condition'] : '__return_true';
-		$localize  = isset( $asset['localize'] ) ? $asset['localize'] : [];
+		$localize  = isset( $asset['localize'] ) ? $asset['localize'] : array();
 		$last_arg  = 'style' === $type ? $media : $in_footer;
 		$register  = "wp_register_$type";
 		$enqueue   = "wp_enqueue_$type";

@@ -1,14 +1,14 @@
 # Genesis Starter Theme
 
-[![WordPress](https://img.shields.io/badge/wordpress-4.9.8%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/seothemes/genesis-starter-theme/blob/master/LICENSE.md)
+[![WordPress](https://img.shields.io/badge/wordpress-4.9.8%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/dkjensen/genesis-starter-theme/blob/master/LICENSE.md)
 
 A developer-friendly starter theme used for creating commercial child themes for the Genesis Framework.
 
 It uses [Laravel Mix](https://laravel.com/docs/5.8/mix) as a build tool to automate mundane development tasks like compiling SCSS and minifying images.
 
-Check out the [live demo](https://demo.seothemes.com/genesis-starter)
+Check out the [live demo](https://demo.dkjensen.com/genesis-starter)
 
-<img src="https://seothemes.com/wp-content/uploads/edd/2019/09/genesis-starter-theme-desktop.png" alt="Genesis Starter Theme screenshot" width="500">
+<img src="https://dkjensen.com/wp-content/uploads/edd/2019/09/genesis-starter-theme-desktop.png" alt="Genesis Starter Theme screenshot" width="500">
 
 ## Table of Contents
 
@@ -29,7 +29,7 @@ Check out the [live demo](https://demo.seothemes.com/genesis-starter)
 
 The Genesis Starter Theme aims to modernize, organize and enhance some aspects of Genesis child theme development. Take a look at what is waiting for you:
 
-- [Bourbon](https://github.com/seothemes/genesis-starter-theme/tree/master/assets/scss) as a lightweight Sass toolkit
+- [Bourbon](https://github.com/dkjensen/genesis-starter-theme/tree/master/assets/scss) as a lightweight Sass toolkit
 - [Laravel Mix](https://laravel.com/docs/5.8/mix) for automating development build tasks
 - [Browsersync](https://browsersync.io/) for synchronized browser testing
 - [Config-based](https://www.alainschlesser.com/config-files-for-reusable-code/), OOP modular architecture
@@ -59,7 +59,7 @@ The Genesis Starter Theme aims to modernize, organize and enhance some aspects o
 Install the latest development version of the Genesis Starter Theme using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
 
 ```shell
-composer create-project seothemes/genesis-starter-theme your-theme-name dev-master && cd "$(\ls -1dt ./*/ | head -n 1)" && npm install && npm run build
+composer create-project dkjensen/genesis-starter-theme your-theme-name dev-master && cd "$(\ls -1dt ./*/ | head -n 1)" && npm install && npm run build
 ```
 
 ### Individual commands:
@@ -67,7 +67,7 @@ composer create-project seothemes/genesis-starter-theme your-theme-name dev-mast
 Install the latest development version of the Genesis Starter Theme using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
 
 ```shell
-composer create-project seothemes/genesis-starter-theme your-theme-name dev-master
+composer create-project dkjensen/genesis-starter-theme your-theme-name dev-master
 ```
 
 Navigate into the theme's root directory:
@@ -134,9 +134,9 @@ All build tasks are located in the theme's `package.json` file, under the *scrip
 
 ## Contributing
 
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/seothemes/genesis-starter-theme/blob/master/.github/CONTRIBUTING.md) to help you get started.
+Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/dkjensen/genesis-starter-theme/blob/master/.github/CONTRIBUTING.md) to help you get started.
 
-See also the list of [contributors](https://github.com/seothemes/genesis-starter-theme/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/dkjensen/genesis-starter-theme/graphs/contributors) who participated in this project.
 
 ## Special Thanks
 

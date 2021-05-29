@@ -2,9 +2,9 @@
   "from": {
     "Name": "Genesis Starter Theme",
     "Description": "Genesis starter theme with a modern development workflow.",
-    "Namespace": "SeoThemes\\GenesisStarterTheme",
-    "Uri": "https://genesisstartertheme.com/",
-    "Author": "SEO Themes",
-    "AuthorUri": "https://seothemes.com/"
+    "Namespace": "Dkjensen\\GenesisStarterTheme",
+    "Uri": "https://dkjensen.com/",
+    "Author": "David Jensen",
+    "AuthorUri": "https://dkjensen.com/"
   }
 }

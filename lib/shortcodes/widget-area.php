@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Shortcodes;
+namespace Dkjensen\GenesisStarterTheme\Shortcodes;
 
 \add_shortcode( 'widget_area', __NAMESPACE__ . '\widget_area_shortcode' );
 /**
@@ -27,9 +27,9 @@ function widget_area_shortcode( $atts ) {
 	}
 
 	$atts = \shortcode_atts(
-		[
+		array(
 			'id' => 'footer-credits',
-		],
+		),
 		$atts,
 		'widget_area'
 	);
@@ -37,10 +37,10 @@ function widget_area_shortcode( $atts ) {
 	\ob_start();
 	\genesis_widget_area(
 		$atts['id'],
-		[
+		array(
 			'before' => '<div class="' . $atts['id'] . ' widget-area"><div class="wrap">',
 			'after'  => '</div></div>',
-		]
+		)
 	);
 
 	return \ob_get_clean();

@@ -2,24 +2,24 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
-return [
-	'add'    => [
-		'excerpt'                    => [ 'page' ],
-		'genesis-layouts'            => [ 'product' ],
-		'genesis-seo'                => [ 'product' ],
-		'genesis-singular-images'    => [ 'page', 'post' ],
-		'genesis-title-toggle'       => [ 'post', 'product' ],
-		'genesis-adjacent-entry-nav' => [ 'post', 'product' ],
-		'hero-section'               => [ 'page', 'post' ],
-	],
-	'remove' => [],
-];
+return array(
+	'add'    => array(
+		'excerpt'                    => array( 'page' ),
+		'genesis-layouts'            => array( 'product' ),
+		'genesis-seo'                => array( 'product' ),
+		'genesis-singular-images'    => array( 'page', 'post' ),
+		'genesis-title-toggle'       => array( 'post', 'product' ),
+		'genesis-adjacent-entry-nav' => array( 'post', 'product' ),
+		'hero-section'               => array( 'page', 'post' ),
+	),
+	'remove' => array(),
+);

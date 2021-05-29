@@ -2,10 +2,10 @@
 
 module.exports = {
     extends: [
-        'stylelint-config-wordpress',
+        '@wordpress/stylelint-config',
         'prettier-stylelint/config.js',
         'stylelint-config-recommended-scss',
-        'stylelint-config-wordpress/scss'
+        '@wordpress/stylelint-config/scss'
     ],
     plugins: 'stylelint-order',
     ignoreFiles: ['style.min.css'],

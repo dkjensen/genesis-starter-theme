@@ -2,14 +2,14 @@
 /// Footer credits component.
 ///
 /// @group  Components
-/// @author Lee Anthony <seothemeswp@gmail.com>
-/// @link   https://github.com/seothemes/genesis-starter-theme
+/// @author David Jensen <david@dkjensen.com>
+/// @link   https://github.com/dkjensen/genesis-starter-theme
 ////
 
 @use "sass:math";
 
 .footer-credits {
-	font-size: math.div( $base--font-size, $major-second );
+	font-size: math.div($base--font-size, $major-second);
 
 
 	p {

@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Structure;
+namespace Dkjensen\GenesisStarterTheme\Structure;
 
 \add_action( 'genesis_meta', __NAMESPACE__ . '\front_page_loop', 5 );
 /**
@@ -42,7 +42,7 @@ function front_page_loop() {
  * @return array
  */
 function front_page_body_class( $classes ) {
-	$classes   = \array_diff( $classes, [ 'no-hero-section' ] );
+	$classes   = \array_diff( $classes, array( 'no-hero-section' ) );
 	$classes[] = 'front-page';
 
 	return $classes;

@@ -2,28 +2,28 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme;
+namespace Dkjensen\GenesisStarterTheme;
 
-use function SeoThemes\GenesisStarterTheme\Functions\get_theme_url;
+use function Dkjensen\GenesisStarterTheme\Functions\get_theme_url;
 
-return [
-	'add'    => [
-		[
+return array(
+	'add'    => array(
+		array(
 			'id'    => 'narrow-content',
 			'label' => __( 'Narrow Content', 'genesis-starter-theme' ),
 			'img'   => get_theme_url() . 'assets/img/narrow-content.gif',
-		],
-	],
-	'remove' => [
+		),
+	),
+	'remove' => array(
 		'content-sidebar-sidebar',
 		'sidebar-sidebar-content',
 		'sidebar-content-sidebar',
-	],
-];
+	),
+);

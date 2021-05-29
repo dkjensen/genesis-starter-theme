@@ -2,8 +2,13 @@
 <ruleset name="WordPress Theme">
 	<description>PHPCS Ruleset for a WordPress Theme</description>
 	<!-- Check files in this directory and subdirectories. -->
-	<file>.</file>
+	<file>functions.php</file>
+	<file>config/.</file>
+	<file>lib/.</file>
+	<file>templates/.</file>
 	<!-- Prevent sniffs of some directories. -->
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>tests/*</exclude-pattern>
 	<exclude-pattern>node_modules/*</exclude-pattern>
     <!--<exclude-pattern>*/app/*</exclude-pattern>-->
 	<exclude-pattern>*/app/autoload.php</exclude-pattern>
@@ -19,7 +24,7 @@
 	<arg name="extensions" value="php"/>
 	<!-- Use the WordPress ruleset, with exclusions. -->
 	<rule ref="WordPress">
-		<exclude name="WordPress.VIP"/>
+		<exclude name="WordPress-VIP-Go"/>
 		<exclude name="Squiz.PHP.CommentedOutCode.Found"/>
 	</rule>
 	<!-- PSR 4 file names -->
@@ -42,7 +47,7 @@
 	<!-- Check all globals have the expected prefix. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="CHILD, genesis"/>
+			<property name="prefixes" type="array" value="Dkjensen, CHILD, genesis"/>
 		</properties>
 	</rule>
 	<!-- Allow theme-specific exceptions to WordPress filename rules. -->

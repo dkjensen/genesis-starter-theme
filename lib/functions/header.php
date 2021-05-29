@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Functions;
+namespace Dkjensen\GenesisStarterTheme\Functions;
 
 /**
  * Custom header image callback.
@@ -98,11 +98,11 @@ function header() {
  * @return void
  */
 register_default_headers(
-	[
-		'child' => [
+	array(
+		'child' => array(
 			'url'           => '%2$s/assets/img/hero.jpg',
 			'thumbnail_url' => '%2$s/assets/img/hero.jpg',
 			'description'   => __( 'Hero Image', 'genesis-starter-theme' ),
-		],
-	]
+		),
+	)
 );

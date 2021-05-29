@@ -2,3 +2,5 @@ node_modules/
 vendor/
 **/*.min.js
 lib/js/menu/superfish.js
+stylelint.config.js
+webpack.mix.js

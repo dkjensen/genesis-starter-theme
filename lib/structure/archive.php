@@ -2,16 +2,16 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Structure;
+namespace Dkjensen\GenesisStarterTheme\Structure;
 
-use function SeoThemes\GenesisStarterTheme\Functions\is_type_archive;
+use function Dkjensen\GenesisStarterTheme\Functions\is_type_archive;
 
 // Reposition entry image.
 \remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
@@ -70,7 +70,7 @@ function archive_post_class( $classes ) {
  * @return string
  */
 function read_more_link( $more_link_text ) {
-	return \str_replace( [ '[', ']', '...' ], '', $more_link_text );
+	return \str_replace( array( '[', ']', '...' ), '', $more_link_text );
 }
 
 \add_filter( 'genesis_author_box_gravatar_size', __NAMESPACE__ . '\author_box_gravatar' );
@@ -98,10 +98,10 @@ function author_box_gravatar( $size ) {
 function entry_wrap_open() {
 	if ( is_type_archive() ) {
 		\genesis_markup(
-			[
+			array(
 				'open'    => '<div %s>',
 				'context' => 'entry-wrap',
-			]
+			)
 		);
 	}
 }
@@ -117,10 +117,10 @@ function entry_wrap_open() {
 function entry_wrap_close() {
 	if ( is_type_archive() ) {
 		\genesis_markup(
-			[
+			array(
 				'close'   => '</div>',
 				'context' => 'entry-wrap',
-			]
+			)
 		);
 	}
 }
@@ -139,11 +139,11 @@ function entry_wrap_close() {
 function widget_entry_wrap_open( $open, $args ) {
 	if ( isset( $args['params']['is_widget'] ) && $args['params']['is_widget'] ) {
 		$markup = \genesis_markup(
-			[
+			array(
 				'open'    => '<div %s>',
 				'context' => 'entry-wrap',
 				'echo'    => false,
-			]
+			)
 		);
 
 		$open = $markup . $open;

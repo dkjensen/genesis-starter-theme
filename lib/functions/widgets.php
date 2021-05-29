@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Functions;
+namespace Dkjensen\GenesisStarterTheme\Functions;
 
 \add_action( 'after_setup_theme', __NAMESPACE__ . '\enable_shortcodes_in_widgets' );
 /**
@@ -60,21 +60,21 @@ function widget_area_defaults( $defaults, $id ) {
 
 	if ( false !== strpos( $id, 'front-page-' ) ) {
 		$defaults['before'] = \genesis_markup(
-			[
+			array(
 				'open'    => '<div class="' . $id . $hero . '"><div class="wrap">',
 				'context' => 'widget-area-wrap',
 				'echo'    => false,
-				'params'  => [
+				'params'  => array(
 					'id' => $id,
-				],
-			]
+				),
+			)
 		);
 		$defaults['after']  = \genesis_markup(
-			[
+			array(
 				'close'   => '</div></div>',
 				'context' => 'widget-area-wrap',
 				'echo'    => false,
-			]
+			)
 		);
 	}
 

@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Tests\Unit;
+namespace Dkjensen\GenesisStarterTheme\Tests\Unit;
 
 use Brain\Monkey;
 use Brain\Monkey\Functions;
@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Abstract Class Test_Case
  *
- * @package SeoThemes\GenesisStarterTheme\Tests\Unit
+ * @package Dkjensen\GenesisStarterTheme\Tests\Unit
  */
 abstract class Test_Case extends TestCase {
 
@@ -57,27 +57,27 @@ abstract class Test_Case extends TestCase {
 
 		// Common escaping functions.
 		Functions\stubs(
-			[
+			array(
 				'esc_attr',
 				'esc_html',
 				'esc_textarea',
 				'esc_url',
 				'hello',
 				'wp_kses_post',
-			]
+			)
 		);
 
 		// Common internationalization functions.
 		Functions\stubs(
-			[
+			array(
 				'__',
 				'esc_html__',
 				'esc_html_x',
 				'esc_attr_x',
-			]
+			)
 		);
 
-		foreach ( [ 'esc_attr_e', 'esc_html_e', '_e' ] as $wp_function ) {
+		foreach ( array( 'esc_attr_e', 'esc_html_e', '_e' ) as $wp_function ) {
 			Functions\when( $wp_function )->echoArg();
 		}
 	}

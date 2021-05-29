@@ -2,14 +2,14 @@
 /**
  * Genesis Starter Theme.
  *
- * @package   SeoThemes\GenesisStarterTheme
- * @link      https://genesisstartertheme.com
- * @author    SEO Themes
- * @copyright Copyright © 2019 SEO Themes
- * @license   GPL-2.0-or-later
+ * @package   Dkjensen\GenesisStarterTheme
+ * @link      https://dkjensen.com
+ * @author    David Jensen
+ * @copyright Copyright © 2021 David Jensenen
+ * @license   GPL-3.0
  */
 
-namespace SeoThemes\GenesisStarterTheme\Structure;
+namespace Dkjensen\GenesisStarterTheme\Structure;
 
 \add_action( 'genesis_meta', __NAMESPACE__ . '\hero_setup' );
 /**
@@ -80,7 +80,7 @@ function hero_setup() {
  * @return array
  */
 function hero_body_class( $classes ) {
-	$classes   = \array_diff( $classes, [ 'no-hero-section' ] );
+	$classes   = \array_diff( $classes, array( 'no-hero-section' ) );
 	$classes[] = 'has-hero-section';
 
 	return $classes;
@@ -127,12 +127,12 @@ function hero_title() {
 
 	if ( isset( $title ) && $title ) {
 		\genesis_markup(
-			[
+			array(
 				'open'    => '<h1 %s itemprop="headline">',
 				'close'   => '</h1>',
 				'content' => $title,
 				'context' => 'hero-title',
-			]
+			)
 		);
 	}
 }
@@ -179,12 +179,12 @@ function hero_excerpt() {
 
 	if ( $excerpt ) {
 		\genesis_markup(
-			[
+			array(
 				'open'    => '<p %s itemprop="description">',
 				'close'   => '</p>',
 				'content' => $excerpt,
 				'context' => 'hero-subtitle',
-			]
+			)
 		);
 	}
 }
@@ -204,12 +204,12 @@ function do_archive_headings_intro_text( $heading = '', $intro_text = '', $conte
 
 	if ( $context && $intro_text ) {
 		\genesis_markup(
-			[
+			array(
 				'open'    => '<p %s itemprop="description">',
 				'close'   => '</p>',
 				'content' => $intro_text,
 				'context' => 'hero-subtitle',
-			]
+			)
 		);
 	}
 }
@@ -256,36 +256,36 @@ function hero_entry_attr( $atts ) {
  */
 function hero_display() {
 	\genesis_markup(
-		[
+		array(
 			'open'    => '<section %s role="banner">',
 			'context' => 'hero-section',
-		]
+		)
 	);
 
 	\genesis_structural_wrap( 'hero-section', 'open' );
 
 	\genesis_markup(
-		[
+		array(
 			'open'    => '<div %s>',
 			'context' => 'hero-inner',
-		]
+		)
 	);
 
 	\do_action( 'genesis_hero_section' );
 
 	\genesis_markup(
-		[
+		array(
 			'close'   => '</div>',
 			'context' => 'hero-inner',
-		]
+		)
 	);
 
 	\genesis_structural_wrap( 'hero-section', 'close' );
 
 	\genesis_markup(
-		[
+		array(
 			'close'   => '</section>',
 			'context' => 'hero-section',
-		]
+		)
 	);
 }
