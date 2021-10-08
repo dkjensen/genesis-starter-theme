@@ -81,10 +81,13 @@ mix.version();
  * @link https://laravel.com/docs/5.6/mix#working-with-scripts
  */
 mix
-    .scripts([
+    .js([
         `${devPath}/js/editor.js`
     ], `${distPath}/js/editor.js`)
-    .scripts([
+    .react();
+
+mix
+    .js([
         `${devPath}/js/hide-show.js`,
         `${devPath}/js/sticky-header.js`,
         `${devPath}/js/smooth-scroll.js`

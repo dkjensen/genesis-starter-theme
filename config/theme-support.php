@@ -84,6 +84,62 @@ return array(
 		'wc-product-gallery-lightbox',
 		'wc-product-gallery-slider',
 		'wp-block-styles',
+		'custom-spacing',
+		'editor-color-palette'     => array(
+			array(
+				'name' => esc_html__( 'Primary', 'genesis-starter-theme' ),
+				'slug' => 'primary',
+				'color' => '#007bff'
+			),
+			array(
+				'name' => esc_html__( 'Secondary', 'genesis-starter-theme' ),
+				'slug' => 'secondary',
+				'color' => '#6c757d'
+			),
+		),
+		'editor-font-sizes'        => array(
+			array(
+				'name' => esc_attr__( 'Small', 'genesis-starter-theme' ),
+				'size' => 12,
+				'slug' => 'small',
+			),
+			array(
+				'name' => esc_attr__( 'Regular', 'genesis-starter-theme' ),
+				'size' => 16,
+				'slug' => 'regular',
+			),
+			array(
+				'name' => esc_attr__( 'Normal', 'genesis-starter-theme' ),
+				'size' => 18,
+				'slug' => 'normal',
+			),
+			array(
+				'name' => esc_attr__( 'Medium', 'genesis-starter-theme' ),
+				'size' => 22,
+				'slug' => 'medium',
+			),
+			array(
+				'name' => esc_attr__( 'Large', 'genesis-starter-theme' ),
+				'size' => 30,
+				'slug' => 'large',
+			),
+			array(
+				'name' => esc_attr__( 'Huge', 'genesis-starter-theme' ),
+				'size' => 50,
+				'slug' => 'huge',
+			),
+			array(
+				'name' => esc_attr__( 'Gigantic', 'genesis-starter-theme' ),
+				'size' => 90,
+				'slug' => 'gigantic',
+			),
+			array(
+				'name' => esc_attr__( 'Enormous', 'genesis-starter-theme' ),
+				'size' => 100,
+				'slug' => 'enormous',
+			),
+		),
+		'editor-gradient-presets'  => array(),
 	),
 	'remove' => array(),
 );

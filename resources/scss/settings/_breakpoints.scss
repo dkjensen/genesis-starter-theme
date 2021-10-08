@@ -7,17 +7,14 @@
 $mq-base: 896px;
 $mq-increment: 128px;
 
-$mq-xxxxs: $mq-base - ($mq-increment * 5);
-$mq-xxxs: $mq-base - ($mq-increment * 4);
-$mq-xxs: $mq-base - ($mq-increment * 3);
-$mq-xs: $mq-base - ($mq-increment * 2);
-$mq-s: $mq-base - $mq-increment;
-$mq-m: $mq-base;
-$mq-l: $mq-base + $mq-increment;
-$mq-xl: $mq-base + ($mq-increment * 2);
-$mq-xxl: $mq-base + ($mq-increment * 3);
-$mq-xxxl: $mq-base + ($mq-increment * 4);
-$mq-xxxxl: $mq-base + ($mq-increment * 5);
+$mq-xxs: 279px;
+$mq-xs: 479px;
+$mq-s: 599px;
+$mq-m: 781px;
+$mq-l: 959px;
+$mq-xl: 1079px;
+$mq-xxl: 1280px;
+$mq-xxxl: 1439px;
 
 ////
 /// Breakpoint list
@@ -29,8 +26,6 @@ $mq-xxxxl: $mq-base + ($mq-increment * 5);
 /// @type Map
 ////
 $mq-breakpoints: (
-	xxxxs: $mq-xxxxs,
-	xxxs: $mq-xxxs,
 	xxs: $mq-xxs,
 	xs: $mq-xs,
 	s: $mq-s,
@@ -39,7 +34,6 @@ $mq-breakpoints: (
 	xl: $mq-xl,
 	xxl: $mq-xxl,
 	xxxl: $mq-xxxl,
-	xxxxl: $mq-xxxxl,
 ) !default;
 
 /// Customize the media type (e.g. `@media screen` or `@media print`)

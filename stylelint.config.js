@@ -8,13 +8,15 @@ module.exports = {
         '@wordpress/stylelint-config/scss'
     ],
     plugins: 'stylelint-order',
-    ignoreFiles: ['style.min.css'],
+    ignoreFiles: ['style.min.css', '**/*.js', '**/*.php'],
     rules: {
         'block-no-empty': null,
         'font-family-no-missing-generic-family-keyword': null,
         'max-line-length': 255,
         'no-duplicate-selectors': null,
         'no-descending-specificity': null,
+        'function-url-quotes': "always",
+        'font-family-name-quotes': "always-unless-keyword",
         'selector-list-comma-newline-after': [
             'always-multi-line',
             {

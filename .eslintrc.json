@@ -9,7 +9,8 @@
 		"wp": true,
 		"wpApiSettings": true,
 		"wcSettings": true,
-		"es6": true
+		"es6": true,
+		"jQuery": true
 	},
 	"parser": "babel-eslint",
 	"parserOptions": {
